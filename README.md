@@ -7,6 +7,12 @@ npm i prisma --save-dev
 npx prisma init
 ```
 
+## Save All Files In VS Code
+
+```
+Ctrl + K + W
+```
+
 ## Database Configuration
 
 ```
@@ -90,6 +96,14 @@ query {
     }
   }
 }
+```
+
+```
+curl 'http://localhost:3000/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: http://localhost:3000' --data-binary '{"query":"query {\n  feed {\n    id\n    title\n    content\n    published\n    author {\n      id\n      name\n      email\n    }\n  }\n}\n"}' --compressed
+```
+
+```
+{"data":{"feed":[{"id":"1","title":"test","content":"123","published":true,"author":{"id":"1","name":"sai","email":"sai@gmail.com"}},{"id":"2","title":"test1","content":"234","published":true,"author":{"id":"1","name":"sai","email":"sai@gmail.com"}}]}}
 ```
 
 <Details><Summary><strong>See more API operations</strong></Summary>
