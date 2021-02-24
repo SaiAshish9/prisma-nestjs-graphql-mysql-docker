@@ -155,7 +155,7 @@ mutation {
 
 ```graphql
 {
-  filterPosts(searchString: "graphql") {
+  filterPosts(searchString: "test") {
     id
     title
     content
