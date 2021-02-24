@@ -1,3 +1,4 @@
+import { AppController } from './app.controller';
 import { Module } from '@nestjs/common'
 import { GraphQLModule } from '@nestjs/graphql'
 import { PrismaService } from './prisma.service'
@@ -11,7 +12,7 @@ import { join } from 'path'
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
     }),
   ],
-  controllers: [],
+  controllers: [AppController],
   providers: [PrismaService, UserResolver, PostResolver],
 })
 export class AppModule {}

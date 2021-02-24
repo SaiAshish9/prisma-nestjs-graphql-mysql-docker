@@ -6,6 +6,7 @@ import {
   Body,
   Put,
   Delete,
+  Redirect
 } from '@nestjs/common';
 
 @Controller()
@@ -14,6 +15,10 @@ export class AppController {
     // private readonly userService: UserService,
     // private readonly postService: PostService,
   ) {}
+
+  @Get()
+  @Redirect('/graphql',301)
+  hello(){}
 
   // @Get('posts')
   // async getPosts():Promise<PostModel[]>{

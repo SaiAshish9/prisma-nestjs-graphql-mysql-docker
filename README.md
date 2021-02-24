@@ -40,7 +40,7 @@ tree prisma
 ## Perform migration whenever something is changed in schema.prisma
 
 ```
-npx prisma migrate dev --preview-feature
+npx prisma migrate dev --name init --preview-feature
 ```
 
 ## SQL Statement's
